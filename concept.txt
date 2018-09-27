@@ -1,0 +1,31 @@
+1. Sony SET 	https://www.sonyliv.com/listing/set_shows	https://www.sonyliv.com/details/live/4867235330001/4867235330001
+2. Sony SAB 	https://www.sonyliv.com/listing/sab_shows	https://www.sonyliv.com/details/live/4867316278001/4867316278001
+3. STAR PLUS	https://www.startv.com/tv-guide/
+4. ZEE TV 		https://en.wikipedia.org/wiki/List_of_programs_broadcast_by_Zee_TV
+
+Entities:
+    channel
+        name
+    show
+        name, channel{}
+    quiz
+        show{}, start_time, status, questions[{ title, op1, op2, op3, op4, correct_choice, start_time, end_time }]
+    user
+        name, balance
+    quiz_participation
+        user{ id, name } quiz{}, [add is_correct to question here], score
+
+
+APIs
+    POST:   users/        SIGNUP
+    GET:    users/me      Dashboard
+    GET:    users/        Leaderboard
+    
+    POST:   quizParticipation/
+    POST:   quizParticipation/submitAnswer
+
+    GET:    quiz/winners
+
+App UI
+    Signup / Login
+    
