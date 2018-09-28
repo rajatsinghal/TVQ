@@ -1,0 +1,4 @@
+{
+    "db": "TVQ-db",
+    "jwt_private_key": "TVQ-jwt_private_key"
+}

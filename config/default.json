@@ -1,3 +1,4 @@
 {
-    "db": "mongodb://localhost/tvq"
+    "db": "mongodb://localhost/tvq",
+    "jwt_private_key": "xxx"
 }
