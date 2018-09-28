@@ -34,7 +34,6 @@ ToDos
     Express (4 hrs)
         - Signup Api - Integrate Joi and JWT (1:30)
         - Dashboard APIs (45 mins)
-        - Add price money field
         - Participation Api (45 mins)
         - Submit Answer Api (30 mins)
 

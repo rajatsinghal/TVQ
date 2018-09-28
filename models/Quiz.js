@@ -11,6 +11,7 @@ const quiz_schema = new mongoose.Schema({
     'show': { type: show_schema, required: true },
     'start_time': Date,
     'status': String,
+    'price_pool': Number,
     'questions': [question_schema],
 });
 
