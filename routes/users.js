@@ -1,14 +1,18 @@
 const express = require('express');
 const { User } = require('../models/User');
-const { QuizParticipation } = require('../models/QuizParticipation');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const auth = require('../middlewares/auth');
+const Joi = require('joi');
 
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-    //TODO Validate with Joi
+    const { error } = Joi.validate(req.body, {
+        name: Joi.string().required().min(3)
+    });
+    if(error) return res.status(400).send(error.details[0].message);
+
     const user = new User({ name: req.body.name })
     await user.save()
     const auth_token = jwt.sign(user.getAuthTokenPayload(), config.get('jwt_private_key'));

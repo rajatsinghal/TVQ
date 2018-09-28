@@ -33,7 +33,6 @@ App UI
 ToDos
     Express (4 hrs)
         - Signup Api - Integrate Joi and JWT (1:30)
-        - SignIn Api (20 mins)
         - Dashboard APIs (45 mins)
         - Add price money field
         - Participation Api (45 mins)
@@ -57,7 +56,7 @@ ToDos
         - Quiz completion - reward, send winners list (1:30 hours)
 
     RN (Integration with backend)
-        
+
 
     More features
         - Leaderboard
