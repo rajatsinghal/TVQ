@@ -1,9 +1,11 @@
 const express = require('express');
-const { User } = require('../models/User');
 const jwt = require('jsonwebtoken');
 const config = require('config');
-const auth = require('../middlewares/auth');
 const Joi = require('joi');
+const auth = require('../middlewares/auth');
+const { User } = require('../models/User');
+const { Channel } = require('../models/Channel');
+const { Quiz } = require('../models/Quiz');
 
 const router = express.Router();
 
@@ -20,7 +22,10 @@ router.post('/', async (req, res) => {
 })
 
 router.get('/me', auth.user, async (req, res) => {
-    res.send(req.user);
+    const channels = await Channel.find();
+    channels.forEach((channel)=> {
+        res.send(await Quiz.find({ 'show.channel._id': channel._id }));
+    });
 })
 
 module.exports = router;

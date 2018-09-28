@@ -16,7 +16,7 @@ const quiz_schema = new mongoose.Schema({
 });
 
 class Quiz extends mongoose.model('Quiz', quiz_schema) {
-
+    
 }
 
-module.exports = { question_schema, quiz_schema, Quiz};
+module.exports = { question_schema, quiz_schema, Quiz };

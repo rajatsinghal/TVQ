@@ -61,3 +61,7 @@ ToDos
         - Leaderboard
         - Life
         - Friends
+        - Admin interface for data entry and monit
+            https://github.com/keystonejs/keystone
+            https://github.com/marmelab/react-admin
+            https://github.com/gerardobort/mongorilla
