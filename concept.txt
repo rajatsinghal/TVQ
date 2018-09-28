@@ -32,7 +32,7 @@ App UI
 
 ToDos
     Express (4 hrs)
-        - Signup Api - Integrate Joi and JWT (1:30)
+        \- Signup Api - Integrate Joi and JWT (1:30)
         - Dashboard APIs (45 mins)
         - Participation Api (45 mins)
         - Submit Answer Api (30 mins)
@@ -44,8 +44,8 @@ ToDos
         - Play quiz (30 mins)
     
     Data Entry (Enough to make it look not-incomplete) (7 hours)
-        - Channels (5 mins)
-        - Shows (1 hour)
+        \- Channels (5 mins)
+        \- Shows (1 hour)
         - Assets (4 hours)
         - Schedule (2 hours)
     
