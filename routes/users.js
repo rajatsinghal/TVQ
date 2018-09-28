@@ -7,6 +7,7 @@ const router = express.Router();
 router.post('/', async (req, res) => {
     //TODO Validate with Joi
     const user = new User({ name: req.body.name })
+    //TODO Create JWT and send
     res.send(await user.save());
 })
 

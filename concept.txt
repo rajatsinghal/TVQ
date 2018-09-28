@@ -29,3 +29,37 @@ APIs
 App UI
     Signup / Login
     
+
+ToDos
+    Express (4 hrs)
+        - Signup Api - Integrate Joi and JWT (1:30)
+        - SignIn Api (20 mins)
+        - Dashboard APIs (45 mins)
+        - Add price money field
+        - Participation Api (45 mins)
+        - Submit Answer Api (30 mins)
+
+    RN (Just template, without plugging-in data) (4 hours)
+        - Project setup (30 mins)
+        - Login / Signup (1 hour)
+        - Dashboard (Shows listing page - Coutdowns, play button) (2 hours)
+        - Play quiz (30 mins)
+    
+    Data Entry (Enough to make it look not-incomplete) (7 hours)
+        - Channels (5 mins)
+        - Shows (1 hour)
+        - Assets (4 hours)
+        - Schedule (2 hours)
+    
+    Backend (5:30 hours)
+        - Create a system to run and schedule commands from backend (3 hours)
+        - System to set show schedule and schedule quiz - backend command (1 hour)
+        - Quiz completion - reward, send winners list (1:30 hours)
+
+    RN (Integration with backend)
+        
+
+    More features
+        - Leaderboard
+        - Life
+        - Friends
