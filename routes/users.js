@@ -22,10 +22,8 @@ router.post('/', async (req, res) => {
 })
 
 router.get('/me', auth.user, async (req, res) => {
-    const channels = await Channel.find();
-    //channels.forEach((channel) => {
-        res.send(await Quiz.find({ 'show.channel._id': channels[0]._id }));
-    //});
+    const upcoming_quizzes = await Quiz.find({ ...Quiz.filter_upcoming() }).sort('start_time').limit(10).select('-__v -show.__v -show.channel.__v');
+    res.send(upcoming_quizzes);
 })
 
 module.exports = router;

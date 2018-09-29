@@ -16,7 +16,13 @@ const quiz_schema = new mongoose.Schema({
 });
 
 class Quiz extends mongoose.model('Quiz', quiz_schema) {
-    
+    static filter_upcoming() {
+        return { status: 'SCHEDULED' }
+    }
+
+    static filter_live() {
+        return { status: 'LIVE' }
+    }
 }
 
 module.exports = { question_schema, quiz_schema, Quiz };
