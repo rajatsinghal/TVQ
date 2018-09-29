@@ -5,13 +5,13 @@
 
 Scraping:
 Sony SET and SAB
-    // 1. texts = [];
-    // 2. jQuery('.title .ng-binding').each(function(index) { texts.push($(this).text()) })
+    // 1. var texts = []; jQuery('.title .ng-binding').each(function(index) { texts.push($(this).text()) })
+    // 2. var imgs = []; $('.onImageLoaded').each(function(index, element) { imgs.push[$(this).attr('src') ] } )
+
 Star Plus
     // 1. Add rajat-entered id to Star Plus row
-    // 2. texts = []; 
-    // 3. $('#rajat-entered .Programmedetail span .pro_title').each(function(index, element) { texts.push($(this).text()) } )
-    // 4. ShowProgramInfo method to fetch full details of show. {"programmefulldetailsForapp": {"programme": {"programmename": "Kasautii Zindagii Kay","genre": "TV Show","synopsis": "Somebody sets the Durga pooja pandal on fire and Prerna and Anjali get stuck in a room. Anurag jumps inside the blazing fire and safely brings them out.","programmedubbedlanguagename": "Hindi","imagefilepath": "http://imagesstartv.whatsonindia.com/dasimages/landscape/360x270/2ADB2B2BEC23F889EA79FC2F80C726282555A83EW.jpg","productionyear": "0","episodeshorttitle": null,"programtitle": "is playing on Today, September 28 at 06:00 PM on STAR PLUS channel"}}}
+    // 2. var texts = []; $('#rajat-entered .Programmedetail span .pro_title').each(function(index, element) { texts.push($(this).text()) } )
+    // 3. ShowProgramInfo method to fetch full details of show. {"programmefulldetailsForapp": {"programme": {"programmename": "Kasautii Zindagii Kay","genre": "TV Show","synopsis": "Somebody sets the Durga pooja pandal on fire and Prerna and Anjali get stuck in a room. Anurag jumps inside the blazing fire and safely brings them out.","programmedubbedlanguagename": "Hindi","imagefilepath": "http://imagesstartv.whatsonindia.com/dasimages/landscape/360x270/2ADB2B2BEC23F889EA79FC2F80C726282555A83EW.jpg","productionyear": "0","episodeshorttitle": null,"programtitle": "is playing on Today, September 28 at 06:00 PM on STAR PLUS channel"}}}
 
 Entities:
     channel

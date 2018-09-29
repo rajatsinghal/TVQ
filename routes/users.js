@@ -23,9 +23,9 @@ router.post('/', async (req, res) => {
 
 router.get('/me', auth.user, async (req, res) => {
     const channels = await Channel.find();
-    channels.forEach((channel)=> {
-        res.send(await Quiz.find({ 'show.channel._id': channel._id }));
-    });
+    //channels.forEach((channel) => {
+        res.send(await Quiz.find({ 'show.channel._id': channels[0]._id }));
+    //});
 })
 
 module.exports = router;
