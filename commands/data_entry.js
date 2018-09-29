@@ -54,7 +54,7 @@ require('../startup/db')();
 //insertData();
 
 async function scheduleShows() {
-    scraped_data.channel_1_slots.forEach(async (show_info) => {
+    scraped_data.channel_1_slots.concat(scraped_data.channel_2_slots).forEach(async (show_info) => {
         if(!show_info.id)
             return;
         
