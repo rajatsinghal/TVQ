@@ -399,7 +399,7 @@
         {
             "id": "5bae11e50b939752670351e2",
             "name": "Comedy Circus",
-            "slot": "SAT - SUN, 09:30 pm",
+            "slot": "Sat - Sun, 09:30 pm",
             "url": "https://setindia.com/in-en/shows/comedy-circus/51"
         },
         {
@@ -415,6 +415,7 @@
             "url": "https://setindia.com/in-en/shows/main-maike-chali-jaungi/50"
         },
         {
+            "id": "",
             "name": "Dil Hi Toh Hai",
             "slot": "Mon - Fri, 10:00 pm",
             "url": "https://setindia.com/in-en/shows/dil-hi-toh-hai/48"

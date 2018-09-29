@@ -1,6 +1,7 @@
 const winston = require('winston');
 const fs = require('fs');
 const request = require('request');
+const moment = require('moment');
 
 const { Channel } = require('../models/Channel');
 const { Show } = require('../models/Show');
@@ -53,10 +54,21 @@ require('../startup/db')();
 //insertData();
 
 async function scheduleShows() {
-    scraped_data.channel_2_slots.forEach(async (show_info) => {
-        const show = await Show.findOne({ "name" : show_info.name });
-        if(show)
-            console.log(show_info.name, show.id)
+    scraped_data.channel_1_slots.forEach(async (show_info) => {
+        if(!show_info.id)
+            return;
+        
+        const show = await Show.findOne({ "_id" : show_info.id });
+        const slots = show_info.slot.split(";");
+        slots.forEach(slot => {
+            const days = slot.split(", ")[0];
+            const days_list = days == "Mon - Fri" ? [1, 2, 3, 4, 5] : [6, 0];
+            days_list.forEach(async (week_day) => {
+                const schedule_time = moment(slot.split(", ")[1], "h:m a").day(week_day + 7).toDate();
+                quiz = new Quiz({ show: show, start_time: schedule_time, price_pool: 10000 });
+                quiz.save();
+            })
+        });
     });
 }
 
