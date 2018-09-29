@@ -1,17 +1,20 @@
-1. Sony SET 	https://www.sonyliv.com/listing/set_shows	https://www.sonyliv.com/details/live/4867235330001/4867235330001
-2. Sony SAB 	https://www.sonyliv.com/listing/sab_shows	https://www.sonyliv.com/details/live/4867316278001/4867316278001
+1. Sony SET 	https://www.setindia.com/in-en  https://www.sonyliv.com/listing/set_shows	https://www.sonyliv.com/details/live/4867235330001/4867235330001
+2. Sony SAB 	https://www.sabtv.com/en_in/    https://www.sonyliv.com/listing/sab_shows	https://www.sonyliv.com/details/live/4867316278001/4867316278001
 3. STAR PLUS	https://www.startv.com/tv-guide/
 4. ZEE TV 		https://en.wikipedia.org/wiki/List_of_programs_broadcast_by_Zee_TV
 
 Scraping:
 Sony SET and SAB
-    // 1. var texts = []; jQuery('.title .ng-binding').each(function(index) { texts.push($(this).text()) })
-    // 2. var imgs = []; $('.onImageLoaded').each(function(index, element) { imgs.push[$(this).attr('src') ] } )
+    1. var texts = []; jQuery('.title .ng-binding').each(function(index) { texts.push($(this).text()) })
+    2. var imgs = []; $('.onImageLoaded').each(function(index, element) { imgs.push[$(this).attr('src') ] } )
+
+SONY SAB
+    let slots_data = []; $('.bounded-show-content').each(function() { slots_data.push({'name': $(this).find('.show-name').text().trim(), 'slot': $(this).find('.show-day').text().trim(), 'time': $(this).find('.show-time').text().trim(), 'url': $(this).find('.show-action').attr('href') }); } )
 
 Star Plus
-    // 1. Add rajat-entered id to Star Plus row
-    // 2. var texts = []; $('#rajat-entered .Programmedetail span .pro_title').each(function(index, element) { texts.push($(this).text()) } )
-    // 3. ShowProgramInfo method to fetch full details of show.
+    1. Add rajat-entered id to Star Plus row
+    2. var texts = []; $('#rajat-entered .Programmedetail span .pro_title').each(function(index, element) { texts.push($(this).text()) } )
+    3. ShowProgramInfo method to fetch full details of show.
 
 Entities:
     channel
@@ -56,7 +59,7 @@ ToDos
     Data Entry (Enough to make it look not-incomplete) (7 hours)
         \- Channels (5 mins)
         \- Shows (1 hour)
-        - Assets (4 hours)
+        \- Assets (4 hours)
         - Schedule (2 hours)
     
     Backend (5:30 hours)

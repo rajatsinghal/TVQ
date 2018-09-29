@@ -394,5 +394,128 @@
             "episodeshorttitle": null,
             "programtitle": "is playing on Today, September 28 at 04:00 AM on STAR PLUS channel "
         }
+    ],
+    "channel_1_slots": [
+        {
+            "id": "5bae11e50b939752670351e2",
+            "name": "Comedy Circus",
+            "slot": "SAT - SUN, 09:30 pm",
+            "url": "https://setindia.com/in-en/shows/comedy-circus/51"
+        },
+        {
+            "id": "5bae11e50b939752670351e0",
+            "name": "Kaun Banega Crorepati",
+            "slot": "Mon - Fri, 09:00 pm",
+            "url": "https://setindia.com/in-en/shows/kaun-banega-crorepati/49"
+        },
+        {
+            "id": "5bae11e50b939752670351e4",
+            "name": "Mai Maike Chali Jaungi",
+            "slot": "Mon - Fri, 08:30 pm",
+            "url": "https://setindia.com/in-en/shows/main-maike-chali-jaungi/50"
+        },
+        {
+            "name": "Dil Hi Toh Hai",
+            "slot": "Mon - Fri, 10:00 pm",
+            "url": "https://setindia.com/in-en/shows/dil-hi-toh-hai/48"
+        },
+        {
+            "id": "5bae11e50b939752670351ec",
+            "name": "Dus Ka Dum",
+            "slot": "Sat - Sun, 9:30 pm",
+            "url": "https://setindia.com/in-en/shows/dus-ka-dum/47"
+        },
+        {
+            "id": "5bae11e50b939752670351e8",
+            "name": "Indian Idol",
+            "slot": "Sat - Sun, 8:00 pm",
+            "url": "https://setindia.com/in-en/shows/indian-idol/45"
+        },
+        {
+            "id": "5bae11e50b939752670351ea",
+            "name": "Porus",
+            "slot": "Mon - Fri, 8:00 pm",
+            "url": "https://setindia.com/in-en/shows/porus/41"
+        },
+        {
+            "id": "5bae11e50b939752670351f2",
+            "name": "Mere Sai - Shraddha Aur Saburi",
+            "slot": "Mon - Fri, 7:00 pm",
+            "url": "https://setindia.com/in-en/shows/mere-sai-shraddha-aur-saburi/35"
+        },
+        {
+            "id": "5bae11e50b939752670351e6",
+            "name": "Yeh Un Dino Ki Baat Hai",
+            "slot": "Mon - Fri, 10:30 pm",
+            "url": "https://setindia.com/in-en/shows/yeh-un-dino-ki-baat-hai/34"
+        },
+        {
+            "id": "5bae11e50b939752670351f4",
+            "name": "Vighnaharta Ganesh",
+            "slot": "Mon - Fri, 7:30 pm",
+            "url": "https://setindia.com/in-en/shows/vighnaharta-ganesh/32"
+        },
+        {
+            "id": "5bae11e50b939752670351fe",
+            "name": "Crime Patrol",
+            "slot": "Mon - Fri, 11:30 pm;Sat - Sun, 10.30 pm",
+            "url": "https://setindia.com/in-en/shows/crime-patrol/8"
+        },
+        {
+            "id": "5bae11e50b939752670351ee",
+            "name": "CID",
+            "slot": "Sat - Sun, 10:00 pm",
+            "url": "https://setindia.com/in-en/shows/cid/1"
+        }
+    ],
+    "channel_2_slots": [
+        {
+            "id": "5baf22e2bd85d25f27e582e0",
+            "name": "Sajan Re Phir Jhoot Mat Bolo",
+            "slot": "Mon - Fri, 10:30 PM",
+            "url": "https://www.sabtv.com/en_in/shows/231/sajan_re_phir_jhoot_mat_bolo"
+        },
+        {
+            "id": "5baf22e2bd85d25f27e582d4",
+            "name": "Taarak Mehta Ka Ooltah Chashmah",
+            "slot": "Mon - Fri, 08:30 PM",
+            "url": "https://www.sabtv.com/en_in/shows/6/taarak_mehta_ka_ooltah_chashmah"
+        },
+        {
+            "id": "5baf22e2bd85d25f27e582d2",
+            "name": "Aladdin",
+            "slot": "Mon - Fri, 09:00 pm",
+            "url": "https://www.sabtv.com/en_in/shows/241/aladdin"
+        },
+        {
+            "id": "5baf22e2bd85d25f27e582d8",
+            "name": "Namune",
+            "slot": "Sat - Sun, 09:00 pm",
+            "url": "https://www.sabtv.com/en_in/shows/240/namune"
+        },
+        {
+            "id": "5baf22e2bd85d25f27e582e4",
+            "name": "Shrimaan Shrimati Phir Se",
+            "slot": "Mon - Fri, 07:30 PM",
+            "url": "https://www.sabtv.com/en_in/shows/239/shrimaan_shrimati_phir_se"
+        },
+        {
+            "id": "5baf22e2bd85d25f27e582dc",
+            "name": "Jijaji Chhat Per Hain",
+            "slot": "Mon - Fri, 09:30 PM",
+            "url": "https://www.sabtv.com/en_in/shows/237/jijaji_chhat_per_hain"
+        },
+        {
+            "id": "5baf22e2bd85d25f27e582e2",
+            "name": "Partners - Trouble Ho Gayi Double",
+            "slot": "Mon - Fri, 10:00 PM",
+            "url": "https://www.sabtv.com/en_in/shows/236/partners___trouble_ho_gayi_double"
+        },
+        {
+            "id": "5baf22e2bd85d25f27e582de",
+            "name": "Tenali Rama",
+            "slot": "Mon - Fri, 08:00 PM",
+            "url": "https://www.sabtv.com/en_in/shows/233/tenali_rama"
+        }
     ]
 }

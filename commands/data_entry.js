@@ -10,7 +10,7 @@ const scraped_data = require('../data/data.json');
 require('../startup/logging')();
 require('../startup/db')();
 
-async function insertData() {
+//async function insertData() {
     // scraped_data.channel_names.forEach((channel_name) => {
     //     const channel = new Channel({ name: channel_name });
     //     channel.save();
@@ -18,7 +18,7 @@ async function insertData() {
 
     // const channel_1 = await Channel.findById("5bae0920f068174fe90707eb");
     // scraped_data.show_names_1.forEach((show_name, index) => {
-    //     const show = new Show({ name: show_name, channel: channel_1 });
+    //     const show = new Show({ name: show_name.trim(), channel: channel_1 });
     //     show.save();
     //     const file_name = "public/img/shows/" + show._id + ".jpg";
     //     downloadFromWeb(scraped_data.show_images_1[index], file_name);
@@ -26,7 +26,7 @@ async function insertData() {
 
     // const channel_2 = await Channel.findById("5bae0920f068174fe90707ec");
     // scraped_data.show_names_2.forEach((show_name, index) => {
-    //     const show = new Show({ name: show_name, channel: channel_2 });
+    //     const show = new Show({ name: show_name.trim(), channel: channel_2 });
     //     show.save();
     //     const file_name = "public/img/shows/" + show._id + ".jpg";
     //     downloadFromWeb(scraped_data.show_images_2[index], file_name);
@@ -49,8 +49,18 @@ async function insertData() {
     //     const file_name = "public/img/shows/" + show._id + ".jpg";
     //     downloadFromWeb(show_details.imagefilepath, file_name });
     // });
+//}
+//insertData();
+
+async function scheduleShows() {
+    scraped_data.channel_2_slots.forEach(async (show_info) => {
+        const show = await Show.findOne({ "name" : show_info.name });
+        if(show)
+            console.log(show_info.name, show.id)
+    });
 }
-insertData();
+
+scheduleShows();
 
 async function downloadFromWeb(uri, filename) {
     console.log(uri + " : " + filename);
