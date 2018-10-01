@@ -49,6 +49,9 @@ ToDos
         \- Dashboard APIs (45 mins)
         \- Participant Api (45 mins)
         - Submit Answer Api (30 mins)
+        Refactor 
+            - Change the way methods (instace and class) are defined on models - Move to schemas.
+
 
     RN (Just template, without plugging-in data) (4 hours)
         - Project setup (30 mins)
@@ -78,3 +81,33 @@ ToDos
             https://github.com/keystonejs/keystone
             https://github.com/marmelab/react-admin
             https://github.com/gerardobort/mongorilla
+
+
+Mongoose:
+    schema.method({
+        purr: function () {}
+        ,scratch: function () {}
+    });
+    OR 
+    animalSchema.methods.findSimilarTypes = function(cb) {
+        return this.model('Animal').find({ type: this.type }, cb);
+    };
+
+    schema.statics.findByName = function(name, cb) {
+        return this.find({ name: new RegExp(name, 'i') }, cb);
+    };
+
+    schema.query.byName = function(name) {
+        return this.where({name: new RegExp(name, 'i')})
+    }
+    Animal.find().byName('fido')
+
+    https://mongoosejs.com/docs/guide.html#indexes
+
+    schema.virtual('fullName').get(function () {
+      return this.name.first + ' ' + this.name.last;
+    });
+
+    const thingSchema = new Schema({..}, { timestamps: { createdAt: 'created_at' } });
+
+    ** IntelliSense **

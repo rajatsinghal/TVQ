@@ -7,6 +7,7 @@ const question_schema = new mongoose.Schema({
     'correct_choice': String,
     'start_time': Date, 'end_time': Date
 });
+
 const quiz_schema = new mongoose.Schema({
     'show': { type: show_schema, required: true },
     'start_time': Date,
