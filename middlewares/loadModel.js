@@ -8,7 +8,7 @@ module.exports = (variable_name, Model) => {
         if(!requested_model)
             return res.status(400).send("Incorrect or incomplete information!!");
         
-        req.body.requested_model = requested_model;
+        (req.body.requested_models || (req.body.requested_models = {}))[requested_model.collection.name] = requested_model;
         next();
     };
 }

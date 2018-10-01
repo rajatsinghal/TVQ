@@ -25,7 +25,7 @@ Entities:
         show{}, start_time, status, questions[{ title, op1, op2, op3, op4, correct_choice, start_time, end_time }]
     user
         name, balance
-    quiz_participation
+    quiz_participant
         user{ id, name } quiz{}, [add is_correct to question here], score
 
 
@@ -34,8 +34,8 @@ APIs
     GET:    users/me      Dashboard
     GET:    users/        Leaderboard
     
-    POST:   quizParticipation/
-    POST:   quizParticipation/submitAnswer
+    POST:   quizParticipant/
+    POST:   quizParticipant/submitAnswer
 
     GET:    quiz/winners
 
@@ -47,7 +47,7 @@ ToDos
     Express (4 hrs)
         \- Signup Api - Integrate Joi and JWT (1:30)
         \- Dashboard APIs (45 mins)
-        \- Participation Api (45 mins)
+        \- Participant Api (45 mins)
         - Submit Answer Api (30 mins)
 
     RN (Just template, without plugging-in data) (4 hours)
