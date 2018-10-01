@@ -46,8 +46,8 @@ App UI
 ToDos
     Express (4 hrs)
         \- Signup Api - Integrate Joi and JWT (1:30)
-        - Dashboard APIs (45 mins)
-        - Participation Api (45 mins)
+        \- Dashboard APIs (45 mins)
+        \- Participation Api (45 mins)
         - Submit Answer Api (30 mins)
 
     RN (Just template, without plugging-in data) (4 hours)
@@ -60,7 +60,7 @@ ToDos
         \- Channels (5 mins)
         \- Shows (1 hour)
         \- Assets (4 hours)
-        - Schedule (2 hours)
+        \- Schedule (2 hours)
     
     Backend (5:30 hours)
         - Create a system to run and schedule commands from backend (3 hours)

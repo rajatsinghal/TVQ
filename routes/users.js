@@ -4,7 +4,6 @@ const config = require('config');
 const Joi = require('joi');
 const auth = require('../middlewares/auth');
 const { User } = require('../models/User');
-const { Channel } = require('../models/Channel');
 const { Quiz } = require('../models/Quiz');
 
 const router = express.Router();
