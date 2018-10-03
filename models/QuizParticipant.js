@@ -11,8 +11,5 @@ const quiz_participant_schema = new mongoose.Schema({
     'score': { type: Number, default: 0 }
 });
 
-class QuizParticipant extends mongoose.model('QuizParticipant', quiz_participant_schema, 'quiz_participants') {
-
-}
-
+const QuizParticipant = mongoose.model('QuizParticipant', quiz_participant_schema, 'quiz_participants');
 module.exports = { quiz_participant_schema, QuizParticipant };

@@ -9,8 +9,5 @@ user_schema.virtual('auth_token_payload').get(function() {
     return { _id: this._id };
 });
 
-class User extends mongoose.model('User', user_schema) {
-    
-}
-
+const User = mongoose.model('User', user_schema);
 module.exports = { user_schema, User };

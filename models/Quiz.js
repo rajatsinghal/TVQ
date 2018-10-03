@@ -23,8 +23,5 @@ quiz_schema.query.live = function() {
     return this.where({ status: 'LIVE' })
 }
 
-class Quiz extends mongoose.model('Quiz', quiz_schema) {
-
-}
-
+const Quiz = mongoose.model('Quiz', quiz_schema);
 module.exports = { question_schema, quiz_schema, Quiz };

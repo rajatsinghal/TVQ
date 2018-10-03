@@ -6,8 +6,5 @@ const show_schema = new mongoose.Schema({
     'channel': { type: channel_schema, required: true }
 });
 
-class Show extends mongoose.model('Show', show_schema) {
-
-}
-
+const Show = mongoose.model('Show', show_schema);
 module.exports = { show_schema, Show };
