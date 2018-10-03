@@ -20,7 +20,7 @@ router.post('/', [
 })
 
 router.get('/me', auth.user, async (req, res) => {
-    const upcoming_quizzes = await Quiz.find({ ...Quiz.filter_upcoming() }).sort('start_time').limit(10).select('-__v -show.__v -show.channel.__v');
+    const upcoming_quizzes = await Quiz.find().upcoming().sort('start_time').limit(10).select('-__v -show.__v -show.channel.__v');
     res.send(upcoming_quizzes);
 })
 

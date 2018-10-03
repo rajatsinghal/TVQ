@@ -16,14 +16,16 @@ const quiz_schema = new mongoose.Schema({
     'questions': [question_schema],
 });
 
-class Quiz extends mongoose.model('Quiz', quiz_schema) {
-    static filter_upcoming() {
-        return { status: 'SCHEDULED' }
-    }
+quiz_schema.query.upcoming = function() {
+    return this.where({ status: 'SCHEDULED' })
+}
 
-    static filter_live() {
-        return { status: 'LIVE' }
-    }
+quiz_schema.query.live = function() {
+    return this.where({ status: 'LIVE' })
+}
+
+class Quiz extends mongoose.model('Quiz', quiz_schema) {
+
 }
 
 module.exports = { question_schema, quiz_schema, Quiz };

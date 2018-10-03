@@ -50,7 +50,7 @@ ToDos
         \- Participant Api (45 mins)
         - Submit Answer Api (30 mins)
         Refactor 
-            - Remove Joi and put express-validator
+            \ - Remove Joi and put express-validator
             - Change the way methods (instace and class) are defined on models - Move to schemas.
 
     RN (Just template, without plugging-in data) (4 hours)
