@@ -5,12 +5,12 @@ const user_schema = new mongoose.Schema({
     'balance': { type: Number, default: 0 }
 });
 
+user_schema.virtual('auth_token_payload').get(function() {
+    return { _id: this._id };
+});
+
 class User extends mongoose.model('User', user_schema) {
     
-    getAuthTokenPayload() {
-        return { _id: this._id };
-    }
-
 }
 
 module.exports = { user_schema, User };

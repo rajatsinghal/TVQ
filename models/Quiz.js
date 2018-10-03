@@ -19,7 +19,6 @@ const quiz_schema = new mongoose.Schema({
 quiz_schema.query.upcoming = function() {
     return this.where({ status: 'SCHEDULED' })
 }
-
 quiz_schema.query.live = function() {
     return this.where({ status: 'LIVE' })
 }
