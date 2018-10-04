@@ -76,11 +76,13 @@ ToDos
 
 
     MISC
-        AWS Direct Connect
-        Mongo multiple databases - mongoose
-        Google cloud spanner
         PM2
         Docker + Kubernetes
+        Github marketplace Travis + Postman
+            http://blog.getpostman.com/2017/08/23/integrate-api-tests-with-postman-newman-and-travis-ci/
+        Mongo multiple databases - mongoose
+        Google cloud spanner
+        AWS Direct Connect
 
 
     More features
