@@ -76,6 +76,8 @@ ToDos
 
 
     MISC
+        commander
+            https://www.npmjs.com/package/commander     https://tutorialzine.com/2014/09/creating-your-first-node-js-command-line-application
         PM2
         Docker + Kubernetes
         Github marketplace Travis + Postman
@@ -83,6 +85,7 @@ ToDos
         Mongo multiple databases - mongoose
         Google cloud spanner
         AWS Direct Connect
+            https://aws.amazon.com/directconnect/
 
 
     More features
