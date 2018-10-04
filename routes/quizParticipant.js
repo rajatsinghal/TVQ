@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const { body } = require('express-validator/check');
+const { body, param } = require('express-validator/check');
+const _ = require('lodash');
 
 const { User } = require('../models/User');
 const { Quiz } = require('../models/Quiz');
@@ -10,9 +11,11 @@ const loadModel = require('../middlewares/loadModel');
 
 const router = express.Router();
 
-router.post('/', [auth.user, loadModel('quiz_id', Quiz)], async (req, res) => {
+router.post('/', [
+    auth.user, loadModel('body', 'quiz_id', Quiz)
+], async (req, res) => {
     const user = await User.findById(req.user._id);
-    const requested_quiz = req.body.requested_models[Quiz.collection.name];
+    const requested_quiz = req.requested_models[Quiz.collection.name];
 
     if(requested_quiz.status != "SCHEDULED")
         return res.status(400).send("Oops, too late! The quiz has already started..");
@@ -26,15 +29,29 @@ router.post('/', [auth.user, loadModel('quiz_id', Quiz)], async (req, res) => {
     res.send(participaton);
 })
 
-router.post('/submitAnswer', 
-[
+router.get('/:id/question/:question_id', [
     auth.user,
-    loadModel('quiz_participant_id', QuizParticipant),
-    body('question_id').exists().isMongoId(),
+    loadModel('params', 'id', QuizParticipant),
+    param('question_id').exists().isMongoId(),
+    require('../middlewares/validationErrors')
+],async (req, res) => {
+    const quiz_participant = req.requested_models[QuizParticipant.collection.name]
+    const question = quiz_participant.quiz.questions.id(req.body.question_id);
+    if(!question)
+        return res.status(400).send("Incorrect or incomplete information!");
+    if(question.start_time < new Date())
+        return res.status(400).send("Too Late!");
+    res.send(_.pick(question, ['title', 'op1', 'op2', 'op3', 'op4']));
+})
+
+router.post('/:id/question/:question_id/submitAnswer', [
+    auth.user,
+    loadModel('params', 'id', QuizParticipant),
+    param('question_id').exists().isMongoId(),
     body('selected_option', "Please send valid answer!").exists().isIn(['op1', 'op2', 'op3', 'op4']),
     require('../middlewares/validationErrors')
 ], async (req, res) => {
-    const quiz_participant = req.body.requested_models[QuizParticipant.collection.name]
+    const quiz_participant = req.requested_models[QuizParticipant.collection.name]
     const question = quiz_participant.quiz.questions.id(req.body.question_id);
     if(!question)
         return res.status(400).send("Incorrect or incomplete information!");

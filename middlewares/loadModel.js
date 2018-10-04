@@ -1,14 +1,15 @@
 const mongoose = require('mongoose')
 
-module.exports = (variable_name, Model) => {
+module.exports = (req_obj_name, variable_name, Model) => {
     return async (req, res, next) => {
-        if(!req.body[variable_name] || !mongoose.Types.ObjectId.isValid(req.body[variable_name]))
+        const req_obj = req[req_obj_name]; //req_obj_name in [body, params, query, headers, cookies]
+        if(!req_obj[variable_name] || !mongoose.Types.ObjectId.isValid(req_obj[variable_name]))
             return res.status(400).send("Incorrect or incomplete information!");
-        const requested_model = await Model.findById(req.body[variable_name]);
+        const requested_model = await Model.findById(req_obj[variable_name]);
         if(!requested_model)
             return res.status(400).send("Incorrect or incomplete information!!");
         
-        (req.body.requested_models || (req.body.requested_models = {}))[requested_model.collection.name] = requested_model;
+        (req.requested_models || (req.requested_models = {}))[requested_model.collection.name] = requested_model;
         next();
     };
 }

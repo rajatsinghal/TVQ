@@ -46,12 +46,14 @@ App UI
 ToDos
     Express (4 hrs)
         \- Signup Api - Integrate Joi and JWT (1:30)
-        \- Dashboard APIs (45 mins)
-        \- Participant Api (45 mins)
-        - Submit Answer Api (30 mins)
+        \- Dashboard APIs (30 mins)
+        \- Participant Api (30 mins)
+        \- Fetch question and options api (20 mins)
+        - Submit Answer Api (20 mins)
         Refactor 
             \ - Remove Joi and put express-validator
             \ - Change the way methods (instace and class) are defined on models - Move to schemas.
+        
 
     RN (Just template, without plugging-in data) (4 hours)
         - Project setup (30 mins)
@@ -71,6 +73,14 @@ ToDos
         - Quiz completion - reward, send winners list (1:30 hours)
 
     RN (Integration with backend)
+
+
+    MISC
+        AWS Direct Connect
+        Mongo multiple databases - mongoose
+        Google cloud spanner
+        PM2
+        Docker + Kubernetes
 
 
     More features
