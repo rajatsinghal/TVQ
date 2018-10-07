@@ -5,8 +5,10 @@ const user_schema = new mongoose.Schema({
     'balance': { type: Number, default: 0 }
 });
 
-user_schema.virtual('auth_token_payload').get(function() {
-    return { _id: this._id };
+user_schema.loadClass(class SchemaClass {
+    get auth_token_payload() {
+        return { _id: this._id };
+    }
 });
 
 const User = mongoose.model('User', user_schema);
