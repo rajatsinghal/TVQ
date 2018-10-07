@@ -80,9 +80,12 @@ ToDos
             https://www.npmjs.com/package/commander     https://tutorialzine.com/2014/09/creating-your-first-node-js-command-line-application
         PM2
         Docker + Kubernetes
+            Alpine
         Github marketplace Travis + Postman
             http://blog.getpostman.com/2017/08/23/integrate-api-tests-with-postman-newman-and-travis-ci/
         Mongo multiple databases - mongoose
+            https://stackoverflow.com/questions/19474712/mongoose-and-multiple-database-in-single-node-js-project
+            https://mongoosejs.com/docs/connections.html#multiple_connections
         Google cloud spanner
         AWS Direct Connect
             https://aws.amazon.com/directconnect/
@@ -126,3 +129,10 @@ Mongoose:
     const thingSchema = new Schema({..}, { timestamps: { createdAt: 'created_at' } });
 
     ** IntelliSense **
+
+
+
+1. Relieving letter
+2. Experience certificate
+3. TDS deduction certificates - Form 16 for last year and current year as well, from the company about TDS that has been deducted till date. Part A and Part B
+4. 6 months salary slips.

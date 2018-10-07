@@ -1,4 +1,4 @@
 {
-    "db": "mongodb://localhost/tvq",
+    "db": "mongodb://mongo-server/tvq",
     "jwt_private_key": "xxx"
 }
