@@ -24,7 +24,7 @@ cmd.command('insertShows').action(async () => {
         const show = new Show({ name: show_name.trim(), channel: channel_1 });
         show.save();
         const file_name = "public/img/shows/" + show._id + ".jpg";
-        downloadFromWeb(scraped_data.show_images_1[index], file_name);
+        downloadAndSave(scraped_data.show_images_1[index], file_name);
     });
 
     const channel_2 = await Channel.findById("5bae0920f068174fe90707ec");
@@ -32,7 +32,7 @@ cmd.command('insertShows').action(async () => {
         const show = new Show({ name: show_name.trim(), channel: channel_2 });
         show.save();
         const file_name = "public/img/shows/" + show._id + ".jpg";
-        downloadFromWeb(scraped_data.show_images_2[index], file_name);
+        downloadAndSave(scraped_data.show_images_2[index], file_name);
     });
 
     const channel_3 = await Channel.findById("5bae0920f068174fe90707ed");
@@ -49,7 +49,7 @@ cmd.command('insertShows').action(async () => {
     scraped_data.show_details_3.forEach(async (show_details) => {
         const show = await Show.findOne({ 'name': show_details.programmename });
         const file_name = "public/img/shows/" + show._id + ".jpg";
-        downloadFromWeb(show_details.imagefilepath, file_name );
+        downloadAndSave(show_details.imagefilepath, file_name );
     });
 })
 
@@ -74,7 +74,7 @@ cmd.command('scheduleQuiz').action(async () => {
 
 cmd.parse(process.argv)
 
-async function downloadFromWeb(uri, filename) {
+async function downloadAndSave(uri, filename) {
     console.log(uri + " : " + filename);
     await new Promise(resolve =>
         request(uri)
