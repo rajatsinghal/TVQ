@@ -9,6 +9,7 @@
   "author": "Rajat Singhal",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.19.0",
     "config": "^2.0.1",
     "express": "^4.16.3",
     "express-async-errors": "^3.0.0",
